@@ -29,12 +29,12 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full mb-6">
-            <AlertTriangle className="h-4 w-4" />
-            <span className="font-medium">Critical Industry Challenges</span>
+          <div className="inline-flex items-center space-x-3 bg-destructive/10 text-destructive px-6 py-3 rounded-full mb-8 border border-destructive/20">
+            <AlertTriangle className="h-5 w-5" />
+            <span className="font-bold tracking-wide">Critical Industry Challenges</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             The Aviation Training Crisis
@@ -51,7 +51,7 @@ const ProblemSection = () => {
             return (
               <div
                 key={index}
-                className="bg-card p-8 rounded-2xl border border-border hover:shadow-aviation transition-all duration-300 group"
+                className="bg-card p-8 rounded-2xl border border-border hover:shadow-card transition-all duration-300 group"
               >
                 <div className="flex items-start space-x-4">
                   <div className={`p-3 rounded-lg bg-muted ${problem.color}`}>

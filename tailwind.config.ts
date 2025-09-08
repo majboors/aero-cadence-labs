@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'inter': ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -48,11 +51,14 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         aviation: {
-          steel: "hsl(var(--aviation-steel))",
-          "sky-start": "hsl(var(--aviation-sky-start))",
-          "sky-end": "hsl(var(--aviation-sky-end))",
-          "jet-red": "hsl(var(--aviation-jet-red))",
-          neutral: "hsl(var(--aviation-neutral))",
+          dark: "hsl(var(--aviation-dark))",
+          darker: "hsl(var(--aviation-darker))",
+          card: "hsl(var(--aviation-card))",
+          blue: "hsl(var(--aviation-blue))",
+          "blue-glow": "hsl(var(--aviation-blue-glow))",
+          white: "hsl(var(--aviation-white))",
+          gray: "hsl(var(--aviation-gray))",
+          border: "hsl(var(--aviation-border))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -71,35 +77,31 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        "gradient-sky": "var(--gradient-sky)",
         "gradient-hero": "var(--gradient-hero)",
-        "gradient-accent": "var(--gradient-accent)",
+        "gradient-blue": "var(--gradient-blue)",
+        "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
-        aviation: "var(--shadow-aviation)",
-        hero: "var(--shadow-hero)",
         glow: "var(--shadow-glow)",
+        card: "var(--shadow-card)",
+        hero: "var(--shadow-hero)",
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--aviation-blue) / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--aviation-blue) / 0.6)" },
         },
         "slide-up": {
           from: { opacity: "0", transform: "translateY(30px)" },
@@ -109,7 +111,8 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
+        "float": "float 4s ease-in-out infinite",
+        "glow": "glow 3s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out",
       },
     },

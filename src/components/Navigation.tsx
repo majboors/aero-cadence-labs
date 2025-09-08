@@ -13,17 +13,17 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-gradient-sky p-2 rounded-lg">
+          <div className="flex items-center space-x-3">
+            <div className="bg-gradient-blue p-2.5 rounded-xl shadow-glow">
               <Plane className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-foreground">FlyAuqab</span>
-            <span className="text-sm bg-accent text-accent-foreground px-2 py-1 rounded-full font-medium">
-              Beta
+            <span className="text-2xl font-bold text-foreground">FlyAuqab</span>
+            <span className="text-xs bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-bold tracking-wider">
+              BETA
             </span>
           </div>
 

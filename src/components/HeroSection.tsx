@@ -23,67 +23,67 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-            <Shield className="h-4 w-4 text-white" />
-            <span className="text-white text-sm font-medium">
+          <div className="inline-flex items-center space-x-3 bg-card/80 backdrop-blur-sm border border-border rounded-full px-6 py-3 mb-8">
+            <Shield className="h-5 w-5 text-primary" />
+            <span className="text-foreground font-semibold tracking-wide">
               World's First Qualified VR FSTD
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-tight tracking-tight">
             <span className="block">FlyAuqab Beta:</span>
-            <span className="block bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+            <span className="block bg-gradient-blue bg-clip-text text-transparent">
               Dual-Use AR/VR
             </span>
             <span className="block">Pilot Training</span>
-            <span className="block text-3xl md:text-4xl lg:text-5xl text-blue-200">
+            <span className="block text-4xl md:text-5xl lg:text-6xl text-primary font-extrabold">
               Under $2,000
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed font-medium">
             From fighter jets to airliners — one universal platform.{" "}
-            <span className="text-white font-semibold">Affordable. Scalable. Future-ready.</span>
+            <span className="text-foreground font-bold">Affordable. Scalable. Future-ready.</span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-            <Button variant="hero" size="xl" className="group">
-              <Play className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10">
+            <Button variant="hero" size="xl" className="group animate-glow">
+              <Play className="h-6 w-6 mr-3 group-hover:scale-110 transition-transform" />
               Request a Demo
             </Button>
-            <Button variant="hero-outline" size="xl" className="group">
+            <Button variant="outline" size="xl" className="group">
               Partner with FlyAuqab
-              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="h-6 w-6 ml-3 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
           {/* Tagline */}
-          <div className="inline-flex items-center space-x-2 text-cyan-200 text-lg font-medium">
-            <Plane className="h-5 w-5" />
+          <div className="inline-flex items-center space-x-3 text-primary text-lg font-bold tracking-wide">
+            <Plane className="h-6 w-6" />
             <span>Train Smarter. Fly Further.</span>
           </div>
         </div>
 
         {/* Floating Icons */}
-        <div className="absolute top-1/4 left-10 animate-float">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-            <Shield className="h-8 w-8 text-blue-200" />
+        <div className="absolute top-1/4 left-10 animate-float hidden lg:block">
+          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border">
+            <Shield className="h-10 w-10 text-primary" />
           </div>
         </div>
-        <div className="absolute top-1/3 right-10 animate-float" style={{ animationDelay: "1s" }}>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-            <Plane className="h-8 w-8 text-cyan-200" />
+        <div className="absolute top-1/3 right-10 animate-float hidden lg:block" style={{ animationDelay: "2s" }}>
+          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border">
+            <Plane className="h-10 w-10 text-primary" />
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+        <div className="w-6 h-10 border-2 border-primary/60 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
         </div>
       </div>
     </section>

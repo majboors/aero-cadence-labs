@@ -8,52 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 205 15% 96%;
-    --foreground: 200 18% 26%;
+    /* Dark theme as primary - inspired by Loft Dynamics */
+    --background: 210 11% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 200 18% 26%;
+    --card: 215 15% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 18% 26%;
+    --popover: 215 15% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 200 18% 26%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 200 100% 50%;
+    --primary-foreground: 210 11% 8%;
 
-    --secondary: 207 44% 58%;
+    --secondary: 215 15% 16%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 205 15% 92%;
-    --muted-foreground: 200 10% 45%;
+    --muted: 215 15% 16%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 74% 55%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 200 100% 50%;
+    --accent-foreground: 210 11% 8%;
 
-    --destructive: 0 74% 55%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 205 15% 88%;
-    --input: 205 15% 88%;
-    --ring: 207 44% 58%;
+    --border: 215 15% 20%;
+    --input: 215 15% 16%;
+    --ring: 200 100% 50%;
 
-    /* Aviation-specific design tokens */
-    --aviation-steel: 200 18% 26%;
-    --aviation-sky-start: 207 87% 54%;
-    --aviation-sky-end: 207 44% 58%;
-    --aviation-jet-red: 0 74% 55%;
-    --aviation-neutral: 205 15% 96%;
+    /* Professional Aviation Design System */
+    --aviation-dark: 210 11% 8%;
+    --aviation-darker: 210 15% 4%;
+    --aviation-card: 215 15% 12%;
+    --aviation-blue: 200 100% 50%;
+    --aviation-blue-glow: 200 100% 60%;
+    --aviation-white: 0 0% 98%;
+    --aviation-gray: 0 0% 65%;
+    --aviation-border: 215 15% 20%;
     
-    /* Gradients */
-    --gradient-sky: linear-gradient(135deg, hsl(var(--aviation-sky-start)), hsl(var(--aviation-sky-end)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--aviation-steel) / 0.9), hsl(var(--aviation-steel) / 0.7));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--aviation-jet-red)), hsl(var(--aviation-jet-red) / 0.8));
+    /* Advanced Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--aviation-darker) / 0.95), hsl(var(--aviation-dark) / 0.8));
+    --gradient-blue: linear-gradient(135deg, hsl(var(--aviation-blue)), hsl(var(--aviation-blue-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--aviation-card)), hsl(var(--aviation-card) / 0.8));
     
-    /* Shadows */
-    --shadow-aviation: 0 20px 40px -10px hsl(var(--aviation-steel) / 0.2);
-    --shadow-hero: 0 30px 60px -15px hsl(var(--aviation-steel) / 0.3);
-    --shadow-glow: 0 0 30px hsl(var(--aviation-sky-start) / 0.3);
+    /* Professional Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--aviation-blue) / 0.3);
+    --shadow-card: 0 4px 20px hsl(var(--aviation-darker) / 0.4);
+    --shadow-hero: 0 20px 60px hsl(var(--aviation-darker) / 0.6);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -73,45 +77,35 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 200 25% 8%;
-    --foreground: 205 15% 96%;
+    /* Light theme as secondary */
+    --background: 0 0% 98%;
+    --foreground: 210 11% 8%;
 
-    --card: 200 20% 12%;
-    --card-foreground: 205 15% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 8%;
 
-    --popover: 200 20% 12%;
-    --popover-foreground: 205 15% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 8%;
 
-    --primary: 205 15% 96%;
-    --primary-foreground: 200 18% 26%;
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 207 44% 58%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 15% 95%;
+    --secondary-foreground: 210 11% 8%;
 
-    --muted: 200 20% 15%;
-    --muted-foreground: 205 10% 65%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 74% 55%;
+    --accent: 200 100% 50%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 74% 55%;
+    --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 200 20% 18%;
-    --input: 200 20% 18%;
-    --ring: 207 44% 58%;
-
-    /* Dark mode aviation tokens */
-    --aviation-steel: 205 15% 96%;
-    --aviation-sky-start: 207 87% 54%;
-    --aviation-sky-end: 207 44% 58%;
-    --aviation-jet-red: 0 74% 60%;
-    --aviation-neutral: 200 25% 8%;
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 200 100% 50%;
     
-    /* Dark gradients */
-    --gradient-sky: linear-gradient(135deg, hsl(var(--aviation-sky-start)), hsl(var(--aviation-sky-end)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--aviation-steel) / 0.1), hsl(var(--aviation-steel) / 0.05));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--aviation-jet-red)), hsl(var(--aviation-jet-red) / 0.8));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -129,6 +123,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
   }
 }
