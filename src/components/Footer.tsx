@@ -46,20 +46,20 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-secondary" />
-                <a href="mailto:hello@flyauqab.com" className="hover:text-secondary transition-colors">
+                <Mail className="h-4 w-4 text-primary" />
+                <a href="mailto:hello@flyauqab.com" className="text-primary-foreground hover:text-primary transition-colors">
                   hello@flyauqab.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-secondary" />
-                <a href="tel:+1-555-0123" className="hover:text-secondary transition-colors">
+                <Phone className="h-4 w-4 text-primary" />
+                <a href="tel:+1-555-0123" className="text-primary-foreground hover:text-primary transition-colors">
                   +1 (555) 012-3456
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-secondary" />
-                <span>San Francisco, CA & Remote</span>
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-primary-foreground">San Francisco, CA & Remote</span>
               </div>
             </div>
           </div>

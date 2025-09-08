@@ -1,8 +1,9 @@
-import { CheckCircle, Shield, Zap, DollarSign } from "lucide-react";
+import { CheckCircle, Shield, Zap, DollarSign, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import productImage from "@/assets/vr-kit-product.jpg";
+import { useState } from "react";
 
 const SolutionSection = () => {
+  const [playingVideo, setPlayingVideo] = useState(false);
   const features = [
     {
       icon: Shield,
@@ -66,12 +67,17 @@ const SolutionSection = () => {
 
           {/* Product Image */}
           <div className="relative">
-            <div className="bg-card border border-border p-8 rounded-3xl">
+            <div className="bg-card border border-border p-8 rounded-3xl relative group cursor-pointer" onClick={() => setPlayingVideo(true)}>
               <img
-                src={productImage}
+                src="/product-image-fullkit.png"
                 alt="FlyAuqab Beta Kit"
                 className="w-full h-auto rounded-2xl"
               />
+              
+              {/* Play Button */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-6 transition-all duration-300 hover:scale-110">
+                <Play className="h-12 w-12 text-white fill-white" />
+              </div>
             </div>
             
             {/* Floating badges */}
@@ -84,6 +90,29 @@ const SolutionSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {playingVideo && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-4xl bg-card rounded-2xl overflow-hidden shadow-2xl">
+            <button
+              onClick={() => setPlayingVideo(false)}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <video
+              src="/product-video-fullkit.mp4"
+              controls
+              autoPlay
+              className="w-full h-auto max-h-[80vh]"
+              onEnded={() => setPlayingVideo(false)}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -88,14 +88,14 @@ const FAQ = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
               <a 
                 href="mailto:support@flyauqab.com" 
-                className="text-secondary hover:text-secondary/80 font-medium"
+                className="text-primary hover:text-primary/80 font-medium bg-primary/10 px-4 py-2 rounded-lg transition-colors"
               >
                 support@flyauqab.com
               </a>
               <span className="hidden sm:block text-muted-foreground">•</span>
               <a 
                 href="tel:+1-555-0123" 
-                className="text-secondary hover:text-secondary/80 font-medium"
+                className="text-primary hover:text-primary/80 font-medium bg-primary/10 px-4 py-2 rounded-lg transition-colors"
               >
                 +1 (555) 012-3456
               </a>
