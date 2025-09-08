@@ -1,17 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, Shield, Plane } from "lucide-react";
-import heroImage from "@/assets/vr-cockpit-hero.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="VR Cockpit Training"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="https://www.loftdynamics.com/wp-content/uploads/2025/03/loft-dynamics-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
 
