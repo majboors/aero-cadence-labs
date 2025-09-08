@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import ProblemSection from "@/components/ProblemSection";
+import KeyStats from "@/components/KeyStats";
+import GameChanging from "@/components/GameChanging";
+import FeatureCards from "@/components/FeatureCards";
 import SolutionSection from "@/components/SolutionSection";
 import ProductModes from "@/components/ProductModes";
 import CompetitiveAdvantage from "@/components/CompetitiveAdvantage";
@@ -14,7 +16,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <ProblemSection />
+      <KeyStats />
+      <GameChanging />
+      <FeatureCards />
       <SolutionSection />
       <ProductModes />
       <CompetitiveAdvantage />

@@ -1,4 +1,4 @@
-import { CheckCircle, Shield, Zap, DollarSign, Minimize2 } from "lucide-react";
+import { CheckCircle, Shield, Zap, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import productImage from "@/assets/vr-kit-product.jpg";
 
@@ -18,7 +18,7 @@ const SolutionSection = () => {
     },
     {
       icon: DollarSign,
-      text: "20x cheaper and 10x smaller than legacy simulators",
+      text: "Dual-use platform for military and civil aviation",
     },
   ];
 
@@ -28,7 +28,7 @@ const SolutionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <div className="inline-flex items-center space-x-2 bg-secondary/20 text-secondary px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
               <CheckCircle className="h-4 w-4" />
               <span className="font-medium">Revolutionary Solution</span>
             </div>
@@ -49,8 +49,8 @@ const SolutionSection = () => {
                 const Icon = feature.icon;
                 return (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="bg-secondary/20 p-2 rounded-lg flex-shrink-0">
-                      <Icon className="h-5 w-5 text-secondary" />
+                    <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
+                      <Icon className="h-5 w-5 text-primary" />
                     </div>
                     <p className="text-foreground">{feature.text}</p>
                   </div>
@@ -58,23 +58,7 @@ const SolutionSection = () => {
               })}
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-secondary mb-1">20x</div>
-                <div className="text-sm text-muted-foreground">Less Expensive</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-secondary mb-1">90%</div>
-                <div className="text-sm text-muted-foreground">Less Emissions</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-secondary mb-1">10x</div>
-                <div className="text-sm text-muted-foreground">Smaller</div>
-              </div>
-            </div>
-
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero-outline" size="lg" className="group">
               Learn More About Our Solution
               <CheckCircle className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
             </Button>
@@ -82,19 +66,19 @@ const SolutionSection = () => {
 
           {/* Product Image */}
           <div className="relative">
-            <div className="bg-gradient-sky p-8 rounded-3xl">
+            <div className="bg-card border border-border p-8 rounded-3xl">
               <img
                 src={productImage}
                 alt="FlyAuqab Beta Kit"
-                className="w-full h-auto rounded-2xl shadow-hero"
+                className="w-full h-auto rounded-2xl"
               />
             </div>
             
             {/* Floating badges */}
-            <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold">
+            <div className="absolute -top-4 -right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
               Under $2,000
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-bold">
+            <div className="absolute -bottom-4 -left-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
               Portable
             </div>
           </div>
