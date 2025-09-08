@@ -83,7 +83,8 @@ const CompetitiveAdvantage = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="bg-card rounded-3xl border border-border overflow-hidden shadow-aviation">
+          {/* Desktop Table View */}
+          <div className="hidden lg:block bg-card rounded-3xl border border-border overflow-hidden shadow-aviation">
             {/* Header */}
             <div className="bg-muted/50 p-6 border-b border-border">
               <div className="grid grid-cols-4 gap-4">
@@ -136,6 +137,44 @@ const CompetitiveAdvantage = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Mobile Card View */}
+          <div className="lg:hidden space-y-4">
+            {comparison.map((item, index) => (
+              <div key={index} className="bg-card rounded-2xl border border-border p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-foreground mb-4">{item.feature}</h3>
+                
+                <div className="space-y-3">
+                  {/* Traditional Simulators */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">Traditional Simulators</span>
+                    <div className={`inline-flex items-center space-x-2 px-3 py-2 rounded-lg border ${getStatusColor(item.traditional.status)}`}>
+                      {getStatusIcon(item.traditional.status)}
+                      <span className="text-sm font-medium">{item.traditional.value}</span>
+                    </div>
+                  </div>
+                  
+                  {/* VR Sims */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">VR Sims</span>
+                    <div className={`inline-flex items-center space-x-2 px-3 py-2 rounded-lg border ${getStatusColor(item.vr.status)}`}>
+                      {getStatusIcon(item.vr.status)}
+                      <span className="text-sm font-medium">{item.vr.value}</span>
+                    </div>
+                  </div>
+                  
+                  {/* FlyAuqab Beta */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-secondary font-medium">FlyAuqab Beta</span>
+                    <div className={`inline-flex items-center space-x-2 px-3 py-2 rounded-lg border ${getStatusColor(item.flyauqab.status)} ${item.flyauqab.status === 'positive' ? 'ring-2 ring-secondary/30' : ''}`}>
+                      {getStatusIcon(item.flyauqab.status)}
+                      <span className="text-sm font-medium">{item.flyauqab.value}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Summary Stats */}
