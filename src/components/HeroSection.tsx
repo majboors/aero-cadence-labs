@@ -10,6 +10,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
         >
           <source src="https://www.loftdynamics.com/wp-content/uploads/2025/03/loft-dynamics-video.mp4" type="video/mp4" />

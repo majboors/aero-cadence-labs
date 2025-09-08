@@ -6,7 +6,7 @@ import FeatureCards from "@/components/FeatureCards";
 import SolutionSection from "@/components/SolutionSection";
 import ProductModes from "@/components/ProductModes";
 import CompetitiveAdvantage from "@/components/CompetitiveAdvantage";
-import BetaKit from "@/components/BetaKit";
+import TechnologySection from "@/components/TechnologySection";
 import FAQ from "@/components/FAQ";
 import ClosingCTA from "@/components/ClosingCTA";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ const Index = () => {
       <SolutionSection />
       <ProductModes />
       <CompetitiveAdvantage />
-      <BetaKit />
+      <TechnologySection />
       <FAQ />
       <ClosingCTA />
       <Footer />
